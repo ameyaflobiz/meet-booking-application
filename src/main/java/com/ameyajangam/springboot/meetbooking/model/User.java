@@ -1,18 +1,23 @@
 package com.ameyajangam.springboot.meetbooking.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Data
 @Entity
+@Builder
+@Data
 @Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue
+    @Column(columnDefinition = "uuid")
     private UUID id;
 
     @JsonProperty(value = "name")
