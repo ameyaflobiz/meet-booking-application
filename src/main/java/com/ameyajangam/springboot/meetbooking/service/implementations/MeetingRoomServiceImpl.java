@@ -22,7 +22,11 @@ public class MeetingRoomServiceImpl implements MeetingRoomService {
 
     @Override
     public MeetingRoom findMeetingRoomByRoomNumber(int roomNumber) {
+//        System.out.println("Are you hereee?");
         MeetingRoom room = repository.findByRoomNumber(roomNumber);
+        // cant print to string for room as room has many bookings and each booking has a room toh internally toString lag raha
+        //hai which is creating a stackoverflow error.
+
         return room;
     }
 
