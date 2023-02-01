@@ -7,4 +7,5 @@ public interface MeetingRoomService {
 
     public MeetingRoom createMeetingRoom(int roomNumber, int roomCapacity, RoomType roomType);
     public MeetingRoom findMeetingRoomByRoomNumber(int roomNumber);
+
 }
